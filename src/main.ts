@@ -18,7 +18,7 @@ const bar = new Graph({
     a: [],
     b: [],
     c: [],
-}).addVertex("d");
+});
 bar.addEdges("a", ["b", "c"], true).addEdges("a", ["d"], false);
 
 // tslint:disable-next-line:no-console
