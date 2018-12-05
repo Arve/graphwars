@@ -1,25 +1,14 @@
 // import {Vertex} from "./vertex";
-import {DirectedGraph as Graph} from "./graph";
+// import {DirectedGraph as Graph} from "./graph";
+import {PlayField as PF} from "./playfield";
 
-const foo = new Graph();
-foo.addVertex("a");
-foo.addVertex("b");
-foo.addVertex("c");
-const x = foo.getVertex("a");
-x.addProperty("kablam", {shits: "giggles"});
-x.addProperty("vbbj", "foo");
-x.addEdge("b").addEdge("c", 5);
-// x.addEdge("c");
+const pf = new PF();
+pf.addVertex("West Virginia");
+pf.getVertex("West Virginia").setProperty("name", "West Virginia");
+pf.setRegion("North America", ["West Virginia"]);
+pf.setTerritoryOwner("West Virginia", "Player 1").setTroopCount("West Virginia", 72);
+// tslint:disable-next-line:no-console
+console.log( pf );
 
 // tslint:disable-next-line:no-console
-// console.log(foo.getEdges("a"));
-
-const bar = new Graph({
-    a: [],
-    b: [],
-    c: [],
-});
-bar.addEdges("a", ["b", "c"], true).addEdges("a", ["d"], false);
-
-// tslint:disable-next-line:no-console
-console.log(JSON.stringify(bar));
+// console.log( pf.getVertex("a").properties);

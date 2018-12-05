@@ -5,7 +5,9 @@
     ],
     "jsRules": {},
     "rules": {
+        "no-unused-expression-chai": true
     },
     "rulesDirectory": [
+        "tslint-no-unused-expression-chai",
     ]
 }

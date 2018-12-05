@@ -59,13 +59,6 @@ class Vertex implements IVertex {
         return this.properties.hasOwnProperty(prop);
     }
 
-    public addProperty(prop: string, value: any): this {
-        if (!this.hasProperty(prop)) {
-            this.properties[prop] = value;
-        }
-        return this;
-    }
-
     public removeProperty(prop: string): this {
         if (this.hasProperty(prop)) {
             delete this.properties[prop];
@@ -74,10 +67,16 @@ class Vertex implements IVertex {
     }
 
     public setProperty(prop: string, value: any): this {
-        if (this.hasProperty(prop)) {
-            this.properties[prop] = value;
-        }
+        this.properties[prop] = value;
         return this;
+    }
+
+    public getProperty(prop: string): any {
+        if (this.hasProperty(prop)) {
+            return this.properties[prop];
+        } else {
+            return null;
+        }
     }
 
 }
